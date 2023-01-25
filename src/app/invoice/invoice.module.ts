@@ -6,6 +6,8 @@ import { InvoicePreviewComponent } from './feature/invoice-preview/invoice-previ
 import { SumInvoicesPipe } from './pipe/sum-invoices.pipe';
 import { InvoiceFormItemComponent } from './ui/invoice-form-item/invoice-form-item.component';
 import { InvoiceTableComponent } from './ui/invoice-table/invoice-table.component';
+import { SharedModule } from '../shared/shared.module';
+import { MaterialModule } from '../material/material.module';
 
 
 
@@ -19,7 +21,7 @@ import { InvoiceTableComponent } from './ui/invoice-table/invoice-table.componen
     InvoiceTableComponent
   ],
   imports: [
-    CommonModule
+    CommonModule, SharedModule, MaterialModule
   ]
 })
 export class InvoiceModule { }

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { MaterialModule } from './material/material.module';
 import { InvoiceModule } from './invoice/invoice.module';
 import { CoreModule } from './core/core.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CoreModule } from './core/core.module';
     AppRoutingModule,
     MaterialModule,
     CoreModule,
-    InvoiceModule
+    InvoiceModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

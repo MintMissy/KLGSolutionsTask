@@ -1,1 +1,6 @@
-<p>company-details works!</p>
+<div>
+	<h1>{{ companyDetails.name }}</h1>
+	<p>Address: {{ companyDetails.address }}</p>
+	<p>Phones: {{ companyDetails.phones | join : ", " }}</p>
+	<hr>
+</div>

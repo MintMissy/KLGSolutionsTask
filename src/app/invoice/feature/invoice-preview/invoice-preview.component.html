@@ -1,1 +1,8 @@
-<p>preview works!</p>
+<ng-container *ngIf="companyDetails$ | async as companyDetails; else companyDetailsFailed">
+	<app-company-details [companyDetails]="companyDetails"> </app-company-details>
+</ng-container>
+<ng-template #companyDetailsFailed>
+	<h1>Loading company details failed</h1>
+</ng-template>
+
+<app-invoice-table></app-invoice-table>
