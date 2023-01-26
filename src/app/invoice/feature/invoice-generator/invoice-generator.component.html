@@ -2,7 +2,7 @@
 	<app-invoice-form-items formGroupName="items" [formGroup]="form" (delete)="onItemRemove($event)">
 	</app-invoice-form-items>
 	<div class="form__actions">
-		<button mat-button (click)="onItemAdd()"><mat-icon>add</mat-icon>Add new item</button>
+		<button mat-button (click)="onItemAdd()" type="button"><mat-icon>add</mat-icon>Add new item</button>
 		<button mat-raised-button color="primary" type="submit">Submit</button>
 	</div>
 	<mat-error *ngIf="ngForm.submitted && invoiceItems.length === 0">Please add items</mat-error>
