@@ -3,8 +3,8 @@
 		<mat-label>Name</mat-label>
 		<input matInput type="text" formControlName="name" placeholder="Name"  />
 		<mat-error *ngIf="name?.touched && name?.hasError('required')">Name is required</mat-error>
-		<mat-error *ngIf="name?.touched && name?.hasError('minLength')">Name must have at least 3 symbols</mat-error>
-		<mat-error *ngIf="name?.touched && name?.hasError('maxLength')">Name can't have more than 30 symbols</mat-error>
+		<mat-error *ngIf="name?.touched && name?.hasError('minlength')">Name must have at least 3 symbols</mat-error>
+		<mat-error *ngIf="name?.touched && name?.hasError('maxlength')">Name can't have more than 30 symbols</mat-error>
 	</mat-form-field>
 	<mat-form-field appearance="fill">
 		<mat-label>Count</mat-label>
