@@ -1,1 +1,24 @@
-<p>invoice-form-item works!</p>
+<div class="invoice-item" [formGroupName]="index">
+	<mat-form-field appearance="fill">
+		<mat-label>Name</mat-label>
+		<input matInput type="text" formControlName="name" placeholder="Name" />
+		<mat-error *ngIf="name?.hasError('required')">Name is required</mat-error>
+		<mat-error *ngIf="name?.hasError('minLength')">Name must have more than 3 symbols</mat-error>
+		<mat-error *ngIf="name?.hasError('maxLength')">Name mustn't have more than 30 symbols</mat-error>
+	</mat-form-field>
+	<mat-form-field appearance="fill">
+		<mat-label>Count</mat-label>
+		<input matInput type="number" step="1" formControlName="count" placeholder="Count" />
+		<mat-error *ngIf="count?.hasError('required')">Amount is required</mat-error>
+		<mat-error *ngIf="count?.hasError('min')">Minimum count is 1</mat-error>
+		<mat-error *ngIf="count?.hasError('max')">Maximum count is 100</mat-error>
+	</mat-form-field>
+	<mat-form-field appearance="fill">
+		<mat-label>Price</mat-label>
+		<input matInput type="number" step="1" formControlName="price" placeholder="Price" />
+		<mat-error *ngIf="price?.hasError('required')">Price is required</mat-error>
+		<mat-error *ngIf="price?.hasError('min')">Minimum price is 1</mat-error>
+		<mat-error *ngIf="price?.hasError('max')">Maximum price is 1000000</mat-error>
+	</mat-form-field>
+	<button mat-mini-fab (click)="onItemDelete()" aria-label="delete"><mat-icon>delete</mat-icon></button>
+</div>

@@ -3,21 +3,20 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { InvoicePreviewComponent } from './invoice-preview.component';
 
 describe('InvoicePreviewComponent', () => {
-  let component: InvoicePreviewComponent;
-  let fixture: ComponentFixture<InvoicePreviewComponent>;
+	let component: InvoicePreviewComponent;
+	let fixture: ComponentFixture<InvoicePreviewComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ InvoicePreviewComponent ]
-    })
-    .compileComponents();
+	beforeEach(async () => {
+		await TestBed.configureTestingModule({
+			declarations: [InvoicePreviewComponent],
+		}).compileComponents();
 
-    fixture = TestBed.createComponent(InvoicePreviewComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+		fixture = TestBed.createComponent(InvoicePreviewComponent);
+		component = fixture.componentInstance;
+		fixture.detectChanges();
+	});
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+	it('should create', () => {
+		expect(component).toBeTruthy();
+	});
 });

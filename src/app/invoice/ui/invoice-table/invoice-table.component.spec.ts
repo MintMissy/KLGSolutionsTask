@@ -3,21 +3,20 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { InvoiceTableComponent } from './invoice-table.component';
 
 describe('InvoiceTableComponent', () => {
-  let component: InvoiceTableComponent;
-  let fixture: ComponentFixture<InvoiceTableComponent>;
+	let component: InvoiceTableComponent;
+	let fixture: ComponentFixture<InvoiceTableComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ InvoiceTableComponent ]
-    })
-    .compileComponents();
+	beforeEach(async () => {
+		await TestBed.configureTestingModule({
+			declarations: [InvoiceTableComponent],
+		}).compileComponents();
 
-    fixture = TestBed.createComponent(InvoiceTableComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+		fixture = TestBed.createComponent(InvoiceTableComponent);
+		component = fixture.componentInstance;
+		fixture.detectChanges();
+	});
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+	it('should create', () => {
+		expect(component).toBeTruthy();
+	});
 });

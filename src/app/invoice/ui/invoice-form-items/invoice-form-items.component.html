@@ -1,0 +1,9 @@
+<div formArrayName="items">
+	<div *ngFor="let invoiceItem of invoiceItems; let i = index">
+		<app-invoice-form-item
+			[invoiceItemForm]="invoiceItem"
+			[index]="i"
+			(delete)="onItemDelete($event)"
+		></app-invoice-form-item>
+	</div>
+</div>

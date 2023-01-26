@@ -1,8 +1,8 @@
 <ng-container *ngIf="companyDetails$ | async as companyDetails; else companyDetailsFailed">
 	<app-company-details [companyDetails]="companyDetails"> </app-company-details>
+	<app-invoice-table *ngIf="invoice !== undefined; else noInvoice" [invoice]="invoice"></app-invoice-table>
+	<ng-template #noInvoice><p>No Items</p></ng-template>
 </ng-container>
 <ng-template #companyDetailsFailed>
-	<h1>Loading company details failed</h1>
+	<mat-spinner diameter="36"></mat-spinner>
 </ng-template>
-
-<app-invoice-table></app-invoice-table>

@@ -3,21 +3,20 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { InvoiceGeneratorComponent } from './invoice-generator.component';
 
 describe('InvoiceGeneratorComponent', () => {
-  let component: InvoiceGeneratorComponent;
-  let fixture: ComponentFixture<InvoiceGeneratorComponent>;
+	let component: InvoiceGeneratorComponent;
+	let fixture: ComponentFixture<InvoiceGeneratorComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ InvoiceGeneratorComponent ]
-    })
-    .compileComponents();
+	beforeEach(async () => {
+		await TestBed.configureTestingModule({
+			declarations: [InvoiceGeneratorComponent],
+		}).compileComponents();
 
-    fixture = TestBed.createComponent(InvoiceGeneratorComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+		fixture = TestBed.createComponent(InvoiceGeneratorComponent);
+		component = fixture.componentInstance;
+		fixture.detectChanges();
+	});
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+	it('should create', () => {
+		expect(component).toBeTruthy();
+	});
 });
