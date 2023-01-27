@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormArray, FormBuilder, Validators } from '@angular/forms';
 import { NavigationExtras, Router } from '@angular/router';
+import { IntegerValidator } from 'src/app/shared/validators/integer.validator';
 
 @Component({
 	selector: 'app-invoice-generator',
@@ -43,8 +44,8 @@ export class InvoiceGeneratorComponent {
 	private createInvoiceItem() {
 		return this.fb.group({
 			name: this.fb.control(null, [Validators.required, Validators.minLength(3), Validators.maxLength(30)]),
-			count: this.fb.control(1, [Validators.required, Validators.min(1), Validators.max(100)]),
-			price: this.fb.control(null, [Validators.required, Validators.min(1), Validators.max(1000000)]),
+			count: this.fb.control(1, [Validators.required, Validators.min(1), Validators.max(100), IntegerValidator]),
+			price: this.fb.control(null, [Validators.required, Validators.min(1), Validators.max(1000000), IntegerValidator]),
 		});
 	}
 }
